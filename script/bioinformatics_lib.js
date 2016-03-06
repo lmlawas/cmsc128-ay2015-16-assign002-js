@@ -4,8 +4,7 @@
 */
 
 function getHammingDistance(){
-
-	// get value from the forms and store to variables
+	// get value from the form and store to variables
 	var str1 = document.forms["hammingDistance"]["str1"].value;
 	var str2 = document.forms["hammingDistance"]["str2"].value;
 
@@ -38,7 +37,7 @@ function getHammingDistance(){
 				"Error! String 2 is not a nucleobase!";				
 			}
 			else{
-				var cnt=0;
+				var cnt=0; 
 				var i;
 				for(i=0;i<str1.length; i++){
 					// if character at str1 index i not equal to
@@ -50,6 +49,28 @@ function getHammingDistance(){
 		}		
 }// end of getHammingDistance()
 
-function countSubstrPattern(string original, string pattern){
+function countSubstrPattern(){
+	// get value from the form and store to variables
+	var o = document.forms["substringPattern"]["original"].value;
+	var p = document.forms["substringPattern"]["pattern"].value;
+	var patt = /[^CGATU]/;
 
+	// check if original is a valid nucloebase
+	if(patt.test(o)==true){
+		document.getElementById("sp").innerHTML = 
+		"Error! Original is not a nucleobase!";	
+	}
+	// check if pattern is a valid nucloebase
+	else if(patt.test(p)==true){
+		document.getElementById("sp").innerHTML = 
+		"Error! Pattern is not a nucleobase!";
+	}
+	else{
+		var cnt=0;
+		var i;
+		for(i=0;i<p.length;i++){
+
+		}
+	}
+	
 }// end of countSubstrPattern()

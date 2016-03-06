@@ -9,15 +9,27 @@
 	<title>Simple Bionformatics Library</title>	
 </head>
 <body>
-	<!-- start of hamming distance -->
-	<h1>Hamming Distance</h1>	
+	<!-- start of get hamming distance -->
+	<h1>Get Hamming Distance</h1>	
 	<form name="hammingDistance" onsubmit="return getHammingDistance();" method="post">
 		String 1: <input type="text" name="str1">
 		String 2: <input type="text" name="str2">
 	</form>	
 	<button onclick="getHammingDistance()">get hamming distance</button>
-	<p>Hamming distance = <span id="hd"></span></p>	
-	<!-- end of hamming distance -->
+	<p>Get Hamming distance = <span id="hd"></span></p>	
+	<!-- end of get hamming distance -->
+
+	<br><hr><br>
+
+	<!-- start of count substring pattern -->
+	<h1>Count Substring Pattern</h1>	
+	<form name="substringPattern" onsubmit="return countSubstrPattern();" method="post">
+		Original: <input type="text" name="original">
+		Pattern: <input type="text" name="pattern">
+	</form>	
+	<button onclick="countSubstrPattern()">count substring pattern</button>
+	<p>Count = <span id="sp"></span></p>	
+	<!-- end of count substring pattern -->
 
 	<script src="script/bioinformatics_lib.js"></script>
 </body>
