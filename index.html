@@ -2,20 +2,23 @@
 	Created by: 		Leensey M. Lawas
 	Dates Accomplished:	March 6, 2016
 -->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Simple Bionformatics Library</title>	
 </head>
 <body>
-	<h1>Hamming Distance</h1>
-	<!-- FORM FOR HAMMING DISTANCE -->
+	<!-- start of hamming distance -->
+	<h1>Hamming Distance</h1>	
 	<form name="hammingDistance" onsubmit="return getHammingDistance();" method="post">
-	String 1: <input type="text" name="str1">
-	String 2: <input type="text" name="str2">
+		String 1: <input type="text" name="str1">
+		String 2: <input type="text" name="str2">
 	</form>	
 	<button onclick="getHammingDistance()">get hamming distance</button>
 	<p>Hamming distance = <span id="hd"></span></p>	
+	<!-- end of hamming distance -->
+
 	<script src="script/bioinformatics_lib.js"></script>
 </body>
 </html>
