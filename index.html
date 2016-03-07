@@ -15,7 +15,7 @@
 		String 1: <input type="text" name="str1">
 		String 2: <input type="text" name="str2">
 	</form>	
-	<button onclick="getHammingDistance()">get distance</button>
+	<button onclick="getHammingDistance(document.forms['hammingDistance']['str1'].value, document.forms['hammingDistance']['str2'].value)">get distance</button>
 	<p>Get Hamming distance = <span id="hd"></span></p>	
 	<!-- end of get hamming distance -->
 
@@ -27,7 +27,7 @@
 		Original: <input type="text" name="original">
 		Pattern: <input type="text" name="pattern">
 	</form>	
-	<button onclick="countSubstrPattern()">count substring(s)</button>
+	<button onclick="countSubstrPattern(document.forms['substringPattern']['original'].value, document.forms['substringPattern']['pattern'].value)">count substring(s)</button>
 	<p>Count = <span id="sp"></span></p>	
 	<!-- end of count substring pattern -->
 
@@ -39,7 +39,7 @@
 		String: <input type="text" name="str3">
 		Alphabet: <input type="text" name="alphabet">
 	</form>	
-	<button onclick="isValidString()">validate string</button>
+	<button onclick="isValidString(document.forms['validString']['str3'].value, document.forms['validString']['alphabet'].value)">validate string</button>
 	<p>Valid = <span id="vs"></span></p>	
 	<!-- end of is valid string -->
 
