@@ -1,6 +1,6 @@
 /*
 	Created by: 		Leensey M. Lawas
-	Dates Accomplished:	March 6, 2016
+	Dates Accomplished:	March 6, 7, 2016
 */
 
 function getHammingDistance(){
@@ -92,3 +92,15 @@ function isValidString(){
 	else document.getElementById("vs").innerHTML = true;
 	
 }// end of isValidString()
+
+function getSkew(){
+
+}// end of getSkew()
+
+function getMaxSkewN(){
+
+}// end of getMaxSkewN()
+
+function getMinSkewN(){
+
+}// end of getMinSkewN()

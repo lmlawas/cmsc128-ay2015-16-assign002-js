@@ -1,6 +1,6 @@
 <!-- 
 	Created by: 		Leensey M. Lawas
-	Dates Accomplished:	March 6, 2016
+	Dates Accomplished:	March 6, 7, 2016
 -->
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 		String 1: <input type="text" name="str1">
 		String 2: <input type="text" name="str2">
 	</form>	
-	<button onclick="getHammingDistance()">get</button>
+	<button onclick="getHammingDistance()">get distance</button>
 	<p>Get Hamming distance = <span id="hd"></span></p>	
 	<!-- end of get hamming distance -->
 
@@ -27,7 +27,7 @@
 		Original: <input type="text" name="original">
 		Pattern: <input type="text" name="pattern">
 	</form>	
-	<button onclick="countSubstrPattern()">count</button>
+	<button onclick="countSubstrPattern()">count substring(s)</button>
 	<p>Count = <span id="sp"></span></p>	
 	<!-- end of count substring pattern -->
 
@@ -39,9 +39,45 @@
 		String: <input type="text" name="str3">
 		Alphabet: <input type="text" name="alphabet">
 	</form>	
-	<button onclick="isValidString()">validate</button>
+	<button onclick="isValidString()">validate string</button>
 	<p>Valid = <span id="vs"></span></p>	
 	<!-- end of is valid string -->
+
+	<br><hr><br>
+
+	<!-- start of get skew -->
+	<h1>Get Skew</h1>	
+	<form name="getSkew" onsubmit="return getSkew();" method="post">
+		String: <input type="text" name="str4">
+		n: <input type="number" name="skew">
+	</form>	
+	<button onclick="getSkew()">get skew</button>
+	<p>G-C = <span id="gs"></span></p>	
+	<!-- end of get skew -->
+
+	<br><hr><br>
+
+	<!-- start of get max skew n -->
+	<h1>Get Max Skew N</h1>	
+	<form name="getMaxSkew" onsubmit="return getMaxSkewN();" method="post">
+		String: <input type="text" name="str5">
+		n: <input type="number" name="skew1">
+	</form>	
+	<button onclick="getMaxSkewN()">get max skew</button>
+	<p>G-C = <span id="max"></span></p>	
+	<!-- end of get max skew n -->
+
+	<br><hr><br>
+
+	<!-- start of get min skew n -->
+	<h1>Get Min Skew N</h1>	
+	<form name="getMinSkew" onsubmit="return getMinSkewN();" method="post">
+		String: <input type="text" name="str6">
+		n: <input type="number" name="skew2">
+	</form>	
+	<button onclick="getMinSkewN()">get min skew</button>
+	<p>G-C = <span id="min"></span></p>	
+	<!-- end of get min skew n -->
 
 	<script src="script/bioinformatics_lib.js"></script>
 </body>
