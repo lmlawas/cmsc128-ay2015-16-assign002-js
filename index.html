@@ -15,7 +15,7 @@
 		String 1: <input type="text" name="str1">
 		String 2: <input type="text" name="str2">
 	</form>	
-	<button onclick="getHammingDistance()">get hamming distance</button>
+	<button onclick="getHammingDistance()">get</button>
 	<p>Get Hamming distance = <span id="hd"></span></p>	
 	<!-- end of get hamming distance -->
 
@@ -27,9 +27,21 @@
 		Original: <input type="text" name="original">
 		Pattern: <input type="text" name="pattern">
 	</form>	
-	<button onclick="countSubstrPattern()">count substring pattern</button>
+	<button onclick="countSubstrPattern()">count</button>
 	<p>Count = <span id="sp"></span></p>	
 	<!-- end of count substring pattern -->
+
+	<br><hr><br>
+
+	<!-- start of is valid string -->
+	<h1>Is Valid String</h1>	
+	<form name="validString" onsubmit="return isValidString();" method="post">
+		String: <input type="text" name="str3">
+		Alphabet: <input type="text" name="alphabet">
+	</form>	
+	<button onclick="isValidString()">validate</button>
+	<p>Valid = <span id="vs"></span></p>	
+	<!-- end of is valid string -->
 
 	<script src="script/bioinformatics_lib.js"></script>
 </body>

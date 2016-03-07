@@ -81,3 +81,14 @@ function countSubstrPattern(){
 	}
 	
 }// end of countSubstrPattern()
+
+function isValidString(){
+	// get value from the form and store to variables
+	var str = document.forms["validString"]["str3"].value;
+	var a = document.forms["validString"]["alphabet"].value;
+	var patt = new RegExp("[^"+a+"]", "g");			
+
+	if(patt.test(str)) document.getElementById("vs").innerHTML = false;
+	else document.getElementById("vs").innerHTML = true;
+	
+}// end of isValidString()
