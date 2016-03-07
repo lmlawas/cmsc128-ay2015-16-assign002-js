@@ -55,8 +55,13 @@ function countSubstrPattern(){
 	var p = document.forms["substringPattern"]["pattern"].value;
 	var patt = /[^CGATU]/;
 
+	// check if original is greater than or equal to pattern
+	if(o.length<p.length){
+		document.getElementById("sp").innerHTML = 
+		"Error! Strings are not equal!";		
+	}
 	// check if original is a valid nucloebase
-	if(patt.test(o)==true){
+	else if(patt.test(o)==true){
 		document.getElementById("sp").innerHTML = 
 		"Error! Original is not a nucleobase!";	
 	}
@@ -68,9 +73,11 @@ function countSubstrPattern(){
 	else{
 		var cnt=0;
 		var i;
-		for(i=0;i<p.length;i++){
-
+		for(i=0;i<=o.length-p.length;i++){
+			// if the substring of o matches string p			
+			if(o.substring(i, p.length+i) == p) cnt++;
 		}
+		document.getElementById("sp").innerHTML = cnt;
 	}
 	
 }// end of countSubstrPattern()
