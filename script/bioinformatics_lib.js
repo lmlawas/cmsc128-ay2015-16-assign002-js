@@ -124,6 +124,19 @@ function getSkew(str, n){
 	}
 }// end of getSkew()
 
+function initCount(str){
+/*******************************************************************************
+	Given a genome str, initialize the starting value to be used by
+	getMaxSkewN() and getMinSkewN().
+*******************************************************************************/	
+	var g_count=0;
+	var c_count=0;
+
+	if(str.charAt(1)=='G') g_count++;
+	if(str.charAt(1)=='C') c_count++;
+	return g_count-c_count;
+}
+
 function getMaxSkewN(str, n){
 /*******************************************************************************
 	Given a genome str of some length q (where q>0), it returns the maximum
@@ -131,7 +144,18 @@ function getMaxSkewN(str, n){
 	(q>=n). The value can be zero, negative or positive. The first position is 
 	one (1) not zero(0) as we typically associate with string implementations.
 *******************************************************************************/
-	var i, j;
+	var i;
+	var j=0;
+	var temp=1;
+	var max=initCount(str);
+
+	for(i=0;i<n;i++){
+		if(getSkew(str, i)>max){
+			max = getSkew(str, i);
+		}
+	}
+
+	return document.getElementById("max").innerHTML = max;
 }// end of getMaxSkewN()
 
 function getMinSkewN(){
