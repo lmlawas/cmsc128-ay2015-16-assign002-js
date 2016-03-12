@@ -63,7 +63,7 @@
 		String: <input type="text" name="str5">
 		n: <input type="number" name="skew1">
 	</form>	
-	<button onclick="getMaxSkewN()">get max skew</button>
+	<button onclick="getMaxSkewN(document.forms['getMaxSkew']['str5'].value, document.forms['getMaxSkew']['skew1'].value)">get max skew</button>
 	<p>G-C = <span id="max"></span></p>	
 	<!-- end of get max skew n -->
 
@@ -75,7 +75,7 @@
 		String: <input type="text" name="str6">
 		n: <input type="number" name="skew2">
 	</form>	
-	<button onclick="getMinSkewN()">get min skew</button>
+	<button onclick="getMinSkewN(document.forms['getMinSkew']['str6'].value, document.forms['getMinSkew']['skew2'].value)">get min skew</button>
 	<p>G-C = <span id="min"></span></p>	
 	<!-- end of get min skew n -->
 
