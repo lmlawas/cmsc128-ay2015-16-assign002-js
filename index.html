@@ -47,11 +47,11 @@
 
 	<!-- start of get skew -->
 	<h1>Get Skew</h1>	
-	<form name="getSkew" onsubmit="return getSkew();" method="post">
+	<form name="getSkewForm" onsubmit="return getSkew();" method="post">
 		String: <input type="text" name="str4">
 		n: <input type="number" name="skew">
 	</form>	
-	<button onclick="getSkew()">get skew</button>
+	<button onclick="getSkew(document.forms['getSkewForm']['str4'].value, document.forms['getSkewForm']['skew'].value)">get skew</button>
 	<p>G-C = <span id="gs"></span></p>	
 	<!-- end of get skew -->
 

@@ -93,7 +93,7 @@ function isValidString(str, alphabet){
 	letters of alphabet.
 *******************************************************************************/	
 	// get regular expression from alphabet
-	var patt = new RegExp("[^"+alphabet+"]", "g");			
+	var patt = new RegExp("[^"+alphabet+"]", "g");
 
 	// if pattern is true, display false
 	if(patt.test(str)) document.getElementById("vs").innerHTML = false;
@@ -101,14 +101,27 @@ function isValidString(str, alphabet){
 	
 }// end of isValidString()
 
-function getSkew(){
+function getSkew(str, n){
 /*******************************************************************************
 	Given a genome str of some length q (where q>0), it returns the number of
 	Gs minus the number of Cs in the first n nucleotides (q>=n). The value can 
 	be zero, negative or positive. The first position is one (1) not zero(0) 
 	as we typically associate with string implementations.
 *******************************************************************************/	
-
+	var g_count=0;
+	var c_count=0;
+	var i;
+	var patt = /[^CGATU]/;
+	if(patt.test(str)){
+		document.getElementById("gs").innerHTML = "Error! String is not a nucleobase";
+	}
+	else{
+		for(i=0;i<n;i++){
+			if(str.charAt(i)=='G') g_count++;
+			if(str.charAt(i)=='C') c_count++;
+		}
+		document.getElementById("gs").innerHTML = g_count-c_count;
+	}
 }// end of getSkew()
 
 function getMaxSkewN(){
